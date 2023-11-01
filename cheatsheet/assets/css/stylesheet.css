@@ -1,0 +1,20 @@
+/*------------------- Cheatsheet Stylesheet----------------------*/
+
+/*---Type Selector---*/
+
+body {
+  background-color: black;
+}
+
+/*---ID Selector---*/
+
+#main-heading {
+  color: aliceblue;
+  text-shadow: 1px 1px #6a5acd;
+}
+
+/*---Class Selector---*/
+
+.primary {
+  border: 2px solid;
+}
