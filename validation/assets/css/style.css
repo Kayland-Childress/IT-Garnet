@@ -1,9 +1,13 @@
 /*------------------------- Validation Stylesheet--------------------------*/
 
-formlabel {
+form label {
   display: inline-block;
   width: 150px;
   text-align: right;
   padding: 5px;
   font-weight: bold;
+}
+
+input, select{
+  display:block;
 }
