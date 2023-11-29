@@ -1,0 +1,1 @@
+$("#npr").validate({ debug: true });
