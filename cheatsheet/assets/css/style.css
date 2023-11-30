@@ -53,42 +53,42 @@ header .star {
 
 header .star .star1 {
   animation-delay: 0s;
-  background-image: url(/cheatsheet/assets/img/star1.png);
+  background-image: url(../img/star1.png);
 }
 
 header .star .star2 {
   animation-delay: -1s;
-  background-image: url(/cheatsheet/assets/img/star2.png);
+  background-image: url(../img/star2.png);
 }
 
 header .star .star3 {
   animation-delay: -2s;
-  background-image: url(/cheatsheet/assets/img/star3.png);
+  background-image: url(../img/star3.png);
 }
 
 header .star .star4 {
   animation-delay: -3s;
-  background-image: url(/cheatsheet/assets/img/star4.png);
+  background-image: url(../img/star4.png);
 }
 
 header .star .star5 {
   animation-delay: -4s;
-  background-image: url(/cheatsheet/assets/img/star5.png);
+  background-image: url(../img/star5.png);
 }
 
 header .star .star6 {
   animation-delay: -5s;
-  background-image: url(/cheatsheet/assets/img/star6.png);
+  background-image: url(../img/star6.png);
 }
 
 header .star .star7 {
   animation-delay: -6s;
-  background-image: url(/cheatsheet/assets/img/star7.png);
+  background-image: url(../img/star7.png);
 }
 
 header .star .star8 {
   animation-delay: -7s;
-  background-image: url(/cheatsheet/assets/img/star8.png);
+  background-image: url(../img/star8.png);
 }
 @keyframes animate {
   0%,
