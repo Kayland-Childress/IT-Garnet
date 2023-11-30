@@ -150,7 +150,6 @@
           type="text"
           id="pn"
           name="PhoneNumber"
-          value="555-555-5555"
           size="14"
           maxlength="14"
           data-rule-required="true"
@@ -291,15 +290,15 @@
         <label for="mlist" class="formlabel"
           >If yes, list medications here:
         </label>
-        <input
-          type="text"
+        <textarea
           id="mlist"
           name="MedicationsList"
           rows="3"
           cols="30"
-        />
+        ></textarea>
         <input type="submit" value="Submit Patient Form" name="SubmitButton" />
       </form>
     </main>
+    <script src="/validation/assets/js/script.js"></script>
   </body>
 </html>
