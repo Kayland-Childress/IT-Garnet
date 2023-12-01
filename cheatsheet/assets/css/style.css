@@ -41,7 +41,7 @@ header {
   align-items: center;
 }
 
-header .star {
+.star {
   position: absolute;
   top: 0;
   left: 0;
@@ -51,42 +51,42 @@ header .star {
   animation: animate 8s ease-in-out infinite, backgroundmove 16s linear infinite;
 }
 
-header .star .star1 {
+.star1 {
   animation-delay: 0s;
   background-image: url(../img/star1.png);
 }
 
-header .star .star2 {
+.star2 {
   animation-delay: -1s;
   background-image: url(../img/star2.png);
 }
 
-header .star .star3 {
+.star3 {
   animation-delay: -2s;
   background-image: url(../img/star3.png);
 }
 
-header .star .star4 {
+.star4 {
   animation-delay: -3s;
   background-image: url(../img/star4.png);
 }
 
-header .star .star5 {
+.star5 {
   animation-delay: -4s;
   background-image: url(../img/star5.png);
 }
 
-header .star .star6 {
+.star6 {
   animation-delay: -5s;
   background-image: url(../img/star6.png);
 }
 
-header .star .star7 {
+.star7 {
   animation-delay: -6s;
   background-image: url(../img/star7.png);
 }
 
-header .star .star8 {
+.star8 {
   animation-delay: -7s;
   background-image: url(../img/star8.png);
 }
