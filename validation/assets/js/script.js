@@ -1,3 +1,1 @@
-$( "#npr" ).validate({
-
-});
+$( "#npr" ).validate({}); 

@@ -9,12 +9,14 @@
     />
     <meta name="author" content="Kayland Childress" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!---------------------Linking to style sheet------------------------>
     <title>Validation</title>
 
     <!---------------------JQuery Sorce Script------------------------>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    <!---------------------JQuery Sorce Script------------------------>
   </head>
 
   <body>
@@ -24,6 +26,7 @@
       </header>
 
       <label for="npr">Please fill out the form below.</label>
+      <!---------------------use the id "" of your form in the validation. I named mine npr------------------------>
       <form
         id="npr"
         action="https://brucebauer.info/assets/ITEC3650/datadump.php"
@@ -300,5 +303,6 @@
       </form>
     </main>
     <script src="/validation/assets/js/script.js"></script>
+    <!---------------------Here you have to link your java script outside of the </form> tag.------------------------>
   </body>
 </html>
