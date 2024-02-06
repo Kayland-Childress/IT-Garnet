@@ -1,0 +1,40 @@
+<!--Hypotenuse of a Right Triangle-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hypotenuse of a Right Triangle</title>
+    <meta charset ="utf-8"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/triangle.css">
+</head>
+
+<body>
+    <form id="TriangleForm" onsubmit="return false">
+    <h2>Hypotenuse of a Right Triangle</h2>
+        <label for="leg1" class="formlabel">Enter leg1 of the triangle:</label>
+        <input type="text" id="leg1" name="leg1"
+               data-rule-required="true"  data-msg-required="Leg1 is Required" 
+               data-rule-number="true" data-msg-number="Leg1 must be floating point number"
+               data-rule-min="0" data-msg-min="Leg1 must be greater than zero">
+        <label for="leg1" class="error" id="leg1error"></label>
+        <br>
+        
+        <label for="leg2" class="formlabel">Enter leg2 of the triangle:</label>
+        <input type="text" id="leg2" name="leg2"
+               data-rule-required="true"  data-msg-required="Leg2 is Required" 
+               data-rule-number="true" data-msg-number="Leg2 must be floating point number"
+               data-rule-min="0" data-msg-min="Leg2 must be greater than zero">
+        <label for="leg2" class="error" id="leg2error"></label>
+        <br><br>
+
+        <label for="hypotenuse" class="formlabel">Hypotenuse:</label>
+        <span id="hypotenuse"></span>
+        <br><br>
+        <input type="submit" value="Calculate" id="btnCalc" onclick="displayHypotenuse()">
+        <input type="submit" value="Clear" id="btnClear" onclick="clearForm()" formnovalidate>
+    </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+<script src="assets/script/triangle.js"></script>
+</html>
