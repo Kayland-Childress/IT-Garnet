@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <form id="CircleForm">
+    <form id="CircleForm" onsubmit="return false">
       <h2>Circle Calculations</h2>
       <label for="radius" class="formlabel">Enter radius of a circle:</label>
       <input
@@ -36,8 +36,74 @@
       <label for="area" class="formlabel">Area:</label><span id="area"></span
       ><br />
       <br /><br />
-      <input type="submit" value="Calculate" id="btnSubmit" />
-      <input type="submit" value="Clear" id="btnSubmit" />
+      <input
+        type="submit"
+        value="Calculate"
+        id="btnSubmit"
+        onclick="displayRadius"
+      />
+      <input
+        type="submit"
+        value="Clear"
+        id="btnSubmit"
+        onclick="clearForm()"
+        formnovalidate
+      />
     </form>
+    <script>
+      $("#CircleForm").validate({});
+
+      function displayRadius() {
+        if ($("#CircleForm").valid()) {
+          document.getElementById("radius").innerHTML = "";
+
+          var diameter;
+          var diameterfp;
+          var circumference;
+          var circumferencefp;
+          var area;
+          var areafp;
+          var radius;
+
+          diameter = document.getElementById("diameter").value;
+          circumference = document.getElementById("circumference").value;
+          area = document.getElementById("area").value;
+          radius = document.getElementById("radius").value;
+
+          diameterfp = parseFloat(diameter);
+          circumferencefp = parseFloat(circumference);
+          areafp = parseFloat(area);
+
+          diameter = calcDiameter(diameterfp);
+          circumference = calcCircumference(circumferencefp);
+          area = calcArea(areafp);
+
+          document.getElementById("diameter").innerHTML = diameterfp.toString();
+          document.getElementById("circumference").innerHTML =
+            circumferencefp.toString();
+          document.getElementById("area").innerHTML = areafp.toString();
+        }
+      }
+
+      function calcDiameter(diametervalue) {
+        return 2 * radiusvalue;
+      }
+
+      function calcCircumference(circumferencevalue) {
+        return 2 * Math.PI * radiusvalue;
+      }
+
+      function calcArea(areavalue) {
+        return Math.PI * radiusvalue * radiusvalue;
+      }
+
+      function clearForm() {
+        document.getElementById("diameter").value = "";
+        document.getElementById("circumference").value = "";
+        document.getElementById("area").value = "";
+        document.getElementById("radius").value = "";
+        document.getElementById("radiuserror").value = "";
+      }
+    </script>
   </body>
 </html>

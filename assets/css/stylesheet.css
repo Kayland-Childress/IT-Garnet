@@ -23,7 +23,7 @@ main {
 body {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-image: url("../img/marble-plant.jpg");
   background-size: cover;
   background-position: center;
