@@ -1,106 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Hypotenuse of a Right Triangle</title>
-    <meta charset ="utf-8"> 
+    <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
 
-<!-- The following should be a file in the "style" folder -->
+    <!-- The following should be a file in the "style" folder -->
     <style>
-    .formlabel {
+      .formlabel {
         display: inline-block;
         width: 200px;
         text-align: right;
         padding: 5px;
         font-weight: bold;
-    }
+      }
 
-    .error {
+      .error {
         color: red;
         padding-left: 5px;
-    }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <form id="TriangleForm" onsubmit="return false">
-    <h2>Hypotenuse of a Right Triangle</h2>
-        <label for="leg1" class="formlabel">Enter leg1 of the triangle:</label>
-        <input type="text" id="leg1" name="leg1"
-               data-rule-required="true"  data-msg-required="Leg1 is Required" 
-               data-rule-number="true" data-msg-number="Leg1 must be floating point number"
-               data-rule-min="0" data-msg-min="Leg1 must be greater than zero">
-        <label for="leg1" class="error" id="leg1error"></label>
-        <br>
-        
-        <label for="leg2" class="formlabel">Enter leg2 of the triangle:</label>
-        <input type="text" id="leg2" name="leg2"
-               data-rule-required="true"  data-msg-required="Leg2 is Required" 
-               data-rule-number="true" data-msg-number="Leg2 must be floating point number"
-               data-rule-min="0" data-msg-min="Leg2 must be greater than zero">
-        <label for="leg2" class="error" id="leg2error"></label>
-        <br><br>
+      <h2>Hypotenuse of a Right Triangle</h2>
+      <label for="leg1" class="formlabel">Enter leg1 of the triangle:</label>
+      <input
+        type="text"
+        id="leg1"
+        name="leg1"
+        data-rule-required="true"
+        data-msg-required="Leg1 is Required"
+        data-rule-number="true"
+        data-msg-number="Leg1 must be floating point number"
+        data-rule-min="0"
+        data-msg-min="Leg1 must be greater than zero"
+      />
+      <label for="leg1" class="error" id="leg1error"></label>
+      <br />
 
-        <label for="hypotenuse" class="formlabel">Hypotenuse:</label>
-        <span id="hypotenuse"></span>
-        <br><br>
-        <input type="submit" value="Calculate" id="btnCalc" onclick="displayHypotenuse()">
-        <input type="submit" value="Clear" id="btnClear" onclick="clearForm()" formnovalidate>
+      <label for="leg2" class="formlabel">Enter leg2 of the triangle:</label>
+      <input
+        type="text"
+        id="leg2"
+        name="leg2"
+        data-rule-required="true"
+        data-msg-required="Leg2 is Required"
+        data-rule-number="true"
+        data-msg-number="Leg2 must be floating point number"
+        data-rule-min="0"
+        data-msg-min="Leg2 must be greater than zero"
+      />
+      <label for="leg2" class="error" id="leg2error"></label>
+      <br /><br />
+
+      <label for="hypotenuse" class="formlabel">Hypotenuse:</label>
+      <span id="hypotenuse"></span>
+      <br /><br />
+      <input
+        type="submit"
+        value="Calculate"
+        id="btnCalc"
+        onclick="displayHypotenuse()"
+      />
+      <input
+        type="submit"
+        value="Clear"
+        id="btnClear"
+        onclick="clearForm()"
+        formnovalidate
+      />
     </form>
-</body>
-    
-<!-- The following should be a file in your js or script folder -->
-<script>
-        $( "#TriangleForm" ).validate({
+  </body>
 
-        });
-        
-        function displayHypotenuse() {
-            // if the form is valid, then make the calculations
-            if ($("#TriangleForm").valid()) {
-                
-                 document.getElementById("hypotenuse").innerHTML = "";
+  <!-- The following should be a file in your js or script folder -->
+  <script>
+    $("#TriangleForm").validate({});
 
-                 var leg1; // string representation of the leg1
-                 var leg1fp; // floating point value of leg1
-                 var leg2; // string representation of the leg1
-                 var leg2fp; // floating point value of leg1
-                 var hypotenuse;  // floating point hypotenuse
-                 var result; // displayable result
+    function displayHypotenuse() {
+      // if the form is valid, then make the calculations
+      if ($("#TriangleForm").valid()) {
+        document.getElementById("hypotenuse").innerHTML = "";
 
-                 // read in the legs as a string
-                 leg1 = document.getElementById("leg1").value;
-                 leg2 = document.getElementById("leg2").value;
+        var leg1; // string representation of the leg1
+        var leg1fp; // floating point value of leg1
+        var leg2; // string representation of the leg1
+        var leg2fp; // floating point value of leg1
+        var hypotenuse; // floating point hypotenuse
+        var result; // displayable result
 
-                 // Convert numbers from strings to Floating Point
-                 leg1fp = parseFloat( leg1 ); 
-                 leg2fp = parseFloat( leg2 ); 
+        // read in the legs as a string
+        leg1 = document.getElementById("leg1").value;
+        leg2 = document.getElementById("leg2").value;
 
-                 // calculate the hypotenuse
-                 hypotenuse = calcHypotenuse(leg1fp, leg2fp);
+        // Convert numbers from strings to Floating Point
+        leg1fp = parseFloat(leg1);
+        leg2fp = parseFloat(leg2);
 
-                 // display the hypotenuse
-                 document.getElementById("hypotenuse").innerHTML = hypotenuse.toString();
-            }
-        }
+        // calculate the hypotenuse
+        hypotenuse = calcHypotenuse(leg1fp, leg2fp);
 
-          function calcHypotenuse (leg1value, leg2value)
-          // returns hypotenuse of a right triangle
-          // square root of leg1 squared plus leg2 squared
-          {
-              return Math.sqrt((leg1value*leg1value) + (leg2value*leg2value));
-          }
-          
-          function clearForm()
-        {
-            document.getElementById("leg1").value = "";
-            document.getElementById("leg1error").innerHTML = "";
-            document.getElementById("leg2").value = "";
-            document.getElementById("leg2error").innerHTML = "";
-            document.getElementById("hypotenuse").innerHTML = "";
-        }
-        
-    </script>
+        // display the hypotenuse
+        document.getElementById("hypotenuse").innerHTML = hypotenuse.toString();
+      }
+    }
+
+    function calcHypotenuse(leg1value, leg2value) {
+      // returns hypotenuse of a right triangle
+      // square root of leg1 squared plus leg2 squared
+      return Math.sqrt(leg1value * leg1value + leg2value * leg2value);
+    }
+
+    function clearForm() {
+      document.getElementById("leg1").value = "";
+      document.getElementById("leg1error").innerHTML = "";
+      document.getElementById("leg2").value = "";
+      document.getElementById("leg2error").innerHTML = "";
+      document.getElementById("hypotenuse").innerHTML = "";
+    }
+  </script>
 </html>

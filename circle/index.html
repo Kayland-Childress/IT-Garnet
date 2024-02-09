@@ -3,12 +3,12 @@
 <html lang="en">
   <head>
     <title>Circle Calculations</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
     <script src="assets/js/circle.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/circle.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/circle.css" >
   </head>
 
   <body>
@@ -25,31 +25,32 @@
         data-msg-number="Radius must be floating point number"
         data-rule-min="0"
         data-msg-min="Radius must be greater than zero"
-      />
+      >
       <label for="radius" class="error" id="radiuserror"></label>
-      <br />
+      <br>
 
       <label for="diameter" class="formlabel">Diameter:</label
-      ><span id="diameter"></span><br />
+      ><span id="diameter"></span><br>
       <label for="circumference" class="formlabel">Circumference:</label
-      ><span id="circumference"></span><br />
+      ><span id="circumference"></span><br>
       <label for="area" class="formlabel">Area:</label><span id="area"></span
-      ><br />
-      <br /><br />
+      ><br>
+      <br><br>
       <input
         type="submit"
         value="Calculate"
-        id="btnSubmit"
-        onclick="displayRadius"
-      />
+        id="btnCalc"
+        onclick="displayRadius()"
+      >
       <input
         type="submit"
         value="Clear"
-        id="btnSubmit"
+        id="btnClear"
         onclick="clearForm()"
         formnovalidate
-      />
+      >
     </form>
+
     <script>
       $("#CircleForm").validate({});
 
@@ -63,12 +64,9 @@
           var circumferencefp;
           var area;
           var areafp;
-          var radius;
 
           diameter = document.getElementById("diameter").value;
-          circumference = document.getElementById("circumference").value;
-          area = document.getElementById("area").value;
-          radius = document.getElementById("radius").value;
+          circumference = document.getElementById("circumference").value;          area = document.getElementById("area").value;
 
           diameterfp = parseFloat(diameter);
           circumferencefp = parseFloat(circumference);
@@ -85,16 +83,16 @@
         }
       }
 
-      function calcDiameter(diametervalue) {
-        return 2 * radiusvalue;
+      function calcDiameter(radius) {
+        return 2 * radius;
       }
 
-      function calcCircumference(circumferencevalue) {
-        return 2 * Math.PI * radiusvalue;
+      function calcCircumference(radius) {
+        return 2 * Math.PI * radius;
       }
 
-      function calcArea(areavalue) {
-        return Math.PI * radiusvalue * radiusvalue;
+      function calcArea(radius) {
+        return Math.PI * radius * radius;
       }
 
       function clearForm() {
@@ -104,6 +102,7 @@
         document.getElementById("radius").value = "";
         document.getElementById("radiuserror").value = "";
       }
+      
     </script>
   </body>
 </html>
