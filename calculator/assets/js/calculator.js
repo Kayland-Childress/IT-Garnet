@@ -6,12 +6,10 @@ function calculate() {
     /* get the operands from the form */
     var operand1 = document.getElementById("Operand1").value;
     var operand2 = document.getElementById("Operand2").value;
-    /* var operator = document.getElementById("Operator").value; */
 
     /* convert the operands from string to floating point */
     var operand1fp = parseFloat(operand1);
     var operand2fp = parseFloat(operand2);
-    /*var operand3fp = parseFloat (operand3); */
 
     /* figure out which operator was checked and place the value in operator */
     var operator;
@@ -60,10 +58,8 @@ function clearform() {
   /* Set all of the form values to blank or false */
   document.getElementById("Operand1").value = "";
   document.getElementById("Operand2").value = "";
-  /*document.getElementById("Operator").value = "";*/
   document.getElementById("Operand1Error").innerHTML = "";
   document.getElementById("Operand2Error").innerHTML = "";
-  /*document.getElementById("OperatorError").innerHTML = "";*/
   document.getElementById("AddOperator").checked = false;
   document.getElementById("SubtractOperator").checked = false;
   document.getElementById("MultiplyOperator").checked = false;
