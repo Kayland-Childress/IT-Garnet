@@ -8,7 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-/*Trying to do a grid style layout*/
 .cf:before,
 .cf:after {
   content: " "; /* 1 */
@@ -20,56 +19,113 @@ html {
 }
 
 main {
-  margin: 20px auto;
+  width: 80wv;
+  display: grid;
+  grid-template-columns: repeat(10, [col-] 1fr);
+  grid-template-rows: auto;
+  margin: auto;
+  gap: 20px;
+  padding: 20px;
 }
 
-header.primary,
-footer.primary {
-  /*  width:920px; */
-  width: 95.8333%;
+/*--------------- Home Page Grid Style Layout---------------*/
+
+header.primary {
   /*background: rgba(7, 95, 99, 0.4);*/
-  /* margin:20px; */
-  margin: 2.0833%;
-  padding: 20px;
-  float: right;
+  grid-column: 1 / 11;
+  grid-row: 1 / 2;
+}
+
+#content {
+  grid-column: 1 / 11;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+footer.primary {
+  /*background: rgba(7, 95, 99, 0.4);*/
+  grid-column: 1 / 11;
+  grid-row: 3 / 4;
+  text-align: center;
 }
 
 #blog {
   /*background: rgba(26, 97, 67, 0.6);*/
-  /* width: 604px; */
-  width: 62.91667%;
-  margin-right: 2.0833%;
-  padding: 20px;
-  float: right;
+  grid-column: 1 / 8;
 }
 
 aside {
   background: rgba(221, 153, 51, 0.2);
-  /*width: 292px;*/
-  width: 30.41667%;
-  margin-left: 2.0833%;
-  padding: 20px;
-  float: left;
+  grid-column: 8 / 11;
 }
 
-/* Grid style end*/
+/*----------Camping Grid----------*/
+#contentCamping {
+  grid-column: 1 / 11;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+#blogCamping {
+  /*background: rgba(26, 97, 67, 0.6);*/
+  grid-column: 1 / 11;
+}
+
+/*----------Recreation Grid----------*/
+
+/*----------Gallary Grid----------*/
+
+/*----------FAQ's Grid----------*/
+
+/* ---------------Grid Style End---------------*/
 
 /*Other styling*/
 
-.widget img {
+.widget {
+  margin: 20px;
+  border-bottom: solid 1px;
+}
+.widget figure img {
   height: 200px;
   max-width: 300px;
 }
 
+.widget figcaption {
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+}
+
+/*----------Article Widgets----------*/
+.widget p {
+  font-size: medium;
+  text-indent: 20px;
+}
+
+.widget footer {
+  font-size: x-small;
+  margin-bottom: 10px;
+}
+/*----------Article Widgets End----------*/
+
+/*----------All Pages Style----------*/
 body {
   font-family: "Montserrat", regular;
+}
+
+p {
+  font-size: larger;
 }
 
 .primary h1 {
   font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 6em;
+  font-size: 5em;
   text-align: center;
   align-content: center;
 }
@@ -83,6 +139,31 @@ header a {
   color: #1a6143;
 }
 
+/*----------Navigation Menu----------*/
+
+.primary nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #dd9933;
+}
+
+.primary nav ul li {
+  display: inline;
+}
+
+.primary nav a {
+  display: inline-block;
+  padding: 14px 16px;
+  font-weight: bold;
+  /*color: #1a6143;*/
+}
+
+/*nav {
+  
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -93,6 +174,7 @@ nav ul {
 
 nav ul li {
   float: left;
+  margin: auto;
 }
 
 nav ul li a {
@@ -102,4 +184,6 @@ nav ul li a {
   padding: 14px 16px;
   text-decoration: none;
   font-weight: bold;
-}
+}*/
+/*----------Navigation Menu Style End----------*/
+/*----------All Pages Style End----------*/
