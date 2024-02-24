@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: rgba(211, 211, 211, 0.5);
+  background-image: url("../img/bg-home.jpg");
+  background-blend-mode: overlay;
+}
+
+main {
+  align-items: center;
+}
+
+#container {
+  background-image: url("../img/bg-small2.png");
+  background-size: cover;
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-color: white;
+  /*position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;*/
+}
+
+h1 {
+  font-family: "Rouge Script", cursive;
+  font-weight: 400;
+  font-size: 8em;
+}
