@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- The head section contains metadata and linked resources -->
+        <meta charset="utf-8" />
+        <meta name="description" content="Place for me to Practice." />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        />
+        <meta name="author" content="Kayland Childress" />
+        <!--<link rel="stylesheet" type="text/css" href="assets/css/practice.css" />-->
+        <link rel="stylesheet" type="text/css" href="assets/css/p2.css" />
+    
+        <title>Kayland Childress | Practice</title>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+    
+    </head>
+
+  <body>
+    <main class="cf">
+        <header>
+            <div class="navbar">
+              <div class="logo"><a href="#">Arkansas State Parks</a></div>
+    
+              <ul class="links">
+                <li><a href= "practice.html">Home</a></li>
+              <li><a href= "page1.html">About</a></li>
+              <li><a href= "page2.html">Camping</a></li>
+              <li><a href= "page3.html">FAQ's</a></li>
+              </ul>
+    
+              <a href= "#" class= "action_btn">Schedule Tour</a>
+    
+              <div class= "toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+    
+              </div>
+            </div>
+    
+            <div class= "dropdown_menu">
+              <li><a href= "practice.html">Home</a></li>
+              <li><a href= "page1.html">About</a></li>
+              <li><a href= "page2.html">Camping</a></li>
+              <li><a href= "page3.html">FAQ's</a></li>
+              <li><a href= "#" class= "action_btn">Schedule Tour</a></li>
+            </div>
+          </header>
+      
+      <section id="contentCamping" class="container">
+          <section id="blogCamping">            
+            <h2>Blanchard Springs Campgrounds</h2>
+            <p>
+              Blanchard Springs Campgrounds is a beautiful spot nestled in the Ozark National Forest just minutes from all sorts of fun stuff to do. Camping, caving, biking, hiking, swimming, birding, and sight seeing are available to Blanchard visitors. The campground's elevation is 400 feet and composed of one loop and a spur. They are separated by the crystal clear North Sylamore Creek. Access to the Loop is by fording the creek over a low-water bridge (inaccessible during heavy rains).
+            </p>
+
+            <p>
+              The campground is heavily wooded with a mixture of hardwoods and cedar and quite attractive with Dogwoods blooming in early April. Blanchard Springs is an excellent destination campground.
+            </p>
+            
+            <h3>Amenities</h3>
+            
+            <table>
+              <tr>
+                <td>Parking</td>
+                <td>Restrooms</td>
+                <td>Grills</td>
+                <td>Picnic Tables</td>
+                <td>Lantern Poles</td>
+              </tr>
+              <tr>
+                <td>Pets Allowed</td>
+                <td>Electrical Hookups</td>
+                <td>Trail Connection</td>
+                <td>Riverfront</td>
+                <td>Location Rating</td>
+              </tr>   
+            </table>
+            
+            <h3>Blanchard Springs Recreation Area Map</h3>
+            <figure>
+              <img src="" alt="Recreation Map"> 
+              <figcaption><a href= "https://www.fs.usda.gov/ivm/">Interactive Visitor Map</a></figcaption>
+            </figure>
+               
+          
+          </section><!--#blogCamping-->
+      </section><!--Camping Page-->  
+          
+           
+      
+      <footer id="colophon" role="contentinfo" class="primary">
+        <h6>&copy; 2024 Kayland Childress</h6>
+      </footer>
+    </main>
+
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+      
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+        
+        toggleBtnIcon.classList= isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars'
+      }
+    </script>
+  </body>
+</html>

@@ -18,7 +18,7 @@ html {
   clear: both;
 }
 
-main {
+main.cf {
   width: 80wv;
   display: grid;
   grid-template-columns: repeat(10, [col-] 1fr);
@@ -28,13 +28,8 @@ main {
   padding: 20px;
 }
 
-/*--------------- Home Page Grid Style Layout---------------*/
+/*--------------- About Page Grid Style Layout---------------*/
 
-header.primary {
-  /*background: rgba(7, 95, 99, 0.4);*/
-  grid-column: 1 / 11;
-  grid-row: 1 / 2;
-}
 
 #content {
   grid-column: 1 / 11;

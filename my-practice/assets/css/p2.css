@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    background-color:#fff;
+    background-image: url('../img/bg-home.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    /*font-size: 1rem;*/
+  }
+  
+  a:hover {
+    color: orange;
+  }
+  
+  /* HEADER */
+  header {
+    position: relative;
+    padding: 0 2rem;
+    /*backdrop-filter: blur(1px);*/
+    background-color: #4a6015;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar .links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .action_btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+  }
+  
+  .action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+  }
+  
+  .action_btn:active {
+    scale: 0.95;
+  }
+  
+  
+  section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    
+  }
+  
+  #hero h1 {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+    font-family: 'Rouge Script', cursive;
+    padding: 20px;
+    color: orange;
+  }
+
+  #hero p {
+    font-size: large;
+    text-shadow: #4a6015;
+  }
+
+  
+  #hero_container{
+    backdrop-filter: blur(15px);
+    background-color: rgba(74, 96, 21, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+      display: none;
+    }
+    
+    .navbar .toggle_btn {
+      display: block;
+    }
+    
+    .dropdown_menu {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .dropdown_menu {
+      left: 2rem;
+      width: unset;
+    }
+  }
+
+/* ABOUT PAGE STYLING */
+
+/* GRID LAYOUT*/
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+main.cf {
+  width: 80wv;
+  /*display: grid;
+  /*grid-template-columns: repeat(10, [col-] 1fr);
+  grid-template-rows: auto;*/
+  margin: auto;
+  /*gap: 20px;*/
+  padding: 20px;
+}
+
+  #content {
+    /*grid-column: 1 / 11;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;*/
+    
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  footer.primary {
+    background: rgba(74, 96, 21, 0.8);
+    /*grid-column: 1 / 11;
+    grid-row: 3 / 4;*/
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+
+  footer.primary h6 a{
+    color: white;
+    text-decoration: none;
+    
+  }
+  
+  #blog {
+    /*background: rgba(26, 97, 67, 0.6);*/
+    grid-column: 1 / 8;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: rgba(74, 96, 21, 0.8);
+  }
+
+  #blog h2 {
+    color: orange;
+  }
+
+  #blog p{
+    text-indent: 20px;
+    padding-bottom: 10px;
+  }
+  
+  aside {
+    background: rgba(74, 96, 21, 0.8);
+    grid-column: 8 / 11;
+    
+  }
+
+  /* WIDGETS */ 
+
+  .widget {
+    margin: 20px;
+    border-bottom: solid 1px;
+  }
+
+ 
+  .widget figure img {
+    height: 200px;
+    max-width: 300px;
+  }
+    
+  .widget figcaption {
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+  }
+    
+  .widget p {
+    font-size: medium;
+    text-indent: 20px;
+  }
+    
+  .widget footer {
+    font-size: x-small;
+    margin-bottom: 10px;
+  }
+
+  .widget h4 {
+    color: orange;
+  }
+  /*----------Article Widgets End----------*/
+

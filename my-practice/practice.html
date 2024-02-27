@@ -6,47 +6,76 @@
     <meta name="description" content="Place for me to Practice." />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0"
     />
     <meta name="author" content="Kayland Childress" />
-    <link rel="stylesheet" type="text/css" href="assets/css/practice.css" />
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/practice.css" />-->
+    <link rel="stylesheet" type="text/css" href="assets/css/p2.css" />
+
     <title>Kayland Childress | Practice</title>
-    <!--Shows up in google search, -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
-  </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+
+</head>
 
   <body>
     <main>
-      <section id="container">
-        <h1>Blanchard Springs Caverns</h1>
-        <nav>
-          <menu>
-            <menuitem><a href="#">Home</a></menuitem>
-            <menuitem><a href="#">About</a></menuitem>
-            <menuitem><a href="#">Camping</a></menuitem>
-            <menuitem><a href="#">Recreation</a></menuitem>
-            <menuitem><a href="#">Gallary</a></menuitem>
-            <menuitem><a href="#">FAQ's</a></menuitem>
-          </menu>
-        </nav>
+      <header>
+        <div class="navbar">
+          <div class="logo"><a href="#">Arkansas State Parks</a></div>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+          <ul class="links">
+            <li><a href= "practice.html">Home</a></li>
+          <li><a href= "page1.html">About</a></li>
+          <li><a href= "page2.html">Camping</a></li>
+          <li><a href= "page3.html">FAQ's</a></li>
+          </ul>
 
-        <footer>
-          <h6>&copy2024 | Kayland Childress | <a>Contact</a></h6>
-        </footer>
+          <a href= "#" class= "action_btn">Schedule Tour</a>
+
+          <div class= "toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+
+          </div>
+        </div>
+
+        <div class= "dropdown_menu">
+          <li><a href= "practice.html">Home</a></li>
+          <li><a href= "page1.html">About</a></li>
+          <li><a href= "page2.html">Camping</a></li>
+          <li><a href= "page3.html">FAQ's</a></li>
+          <li><a href= "#" class= "action_btn">Schedule Tour</a></li>
+        </div>
+      </header>
+      
+    
+      <section id="hero">
+        <section id="hero_container">
+          <h1>Blanchard Springs Caverns</h1>
+
+          <p>Blanchard Springs Caverns is one of the most spectacular and carefully developed caves found anywhere.<br /> Visitors enter a "living" cave where glistening formations like stalactites, stalagmites, columns, and flowstones are still changing.  <br />These crystalline formations are the result of minerals deposited by dripping water.  Forest Service interpreters guide all tours.
+          </p>
+        </section>
       </section>
-    </main>
+    </main>  
+      
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+      
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+        
+        toggleBtnIcon.classList= isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars'
+      }
+    </script>  
   </body>
 </html>
