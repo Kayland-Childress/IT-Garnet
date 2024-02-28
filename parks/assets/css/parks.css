@@ -18,6 +18,17 @@ html {
   clear: both;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  background-color: #fff;
+  background-image: url("../img/bg-home.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
 main.cf {
   width: 80wv;
   display: grid;
@@ -25,113 +36,9 @@ main.cf {
   grid-template-rows: auto;
   margin: auto;
   gap: 20px;
-  padding: 20px;
-}
 
-/*--------------- About Page Grid Style Layout---------------*/
-
-
-#content {
-  grid-column: 1 / 11;
-  grid-row: 2 / 3;
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
-}
-
-footer.primary {
-  /*background: rgba(7, 95, 99, 0.4);*/
-  grid-column: 1 / 11;
-  grid-row: 3 / 4;
-  text-align: center;
-}
-
-#blog {
-  /*background: rgba(26, 97, 67, 0.6);*/
-  grid-column: 1 / 8;
-}
-
-aside {
-  background: rgba(221, 153, 51, 0.2);
-  grid-column: 8 / 11;
-}
-
-/*----------Camping Grid----------*/
-#contentCamping {
-  grid-column: 1 / 11;
-  grid-row: 2 / 3;
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
-}
-
-#blogCamping {
-  /*background: rgba(26, 97, 67, 0.6);*/
-  grid-column: 1 / 11;
-}
-
-/*----------Recreation Grid----------*/
-
-/*----------Gallary Grid----------*/
-
-/*----------FAQ's Grid----------*/
-
-/* ---------------Grid Style End---------------*/
-
-/*Other styling*/
-
-.widget {
-  margin: 20px;
-  border-bottom: solid 1px;
-}
-.widget figure img {
-  height: 200px;
-  max-width: 300px;
-}
-
-.widget figcaption {
-  font-size: small;
-  font-style: italic;
-  text-align: center;
-}
-
-/*----------Article Widgets----------*/
-.widget p {
-  font-size: medium;
-  text-indent: 20px;
-}
-
-.widget footer {
-  font-size: x-small;
-  margin-bottom: 10px;
-}
-/*----------Article Widgets End----------*/
-
-/*----------All Pages Style----------*/
-body {
-  font-family: "Montserrat", regular;
-}
-
-p {
-  font-size: larger;
-}
-
-.primary h1 {
-  font-family: "Allura", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 5em;
-  text-align: center;
-  align-content: center;
-}
-
-.primary h2 {
-  text-align: center;
-}
-
-header a {
-  text-decoration: none;
-  color: #1a6143;
+  backdrop-filter: blur(15px);
+  background-color: rgba(74, 96, 21, 0.2);
 }
 
 /*----------Navigation Menu----------*/
@@ -141,7 +48,8 @@ header a {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #dd9933;
+  display: flex;
+  gap: 2rem;
 }
 
 .primary nav ul li {
@@ -150,35 +58,235 @@ header a {
 
 .primary nav a {
   display: inline-block;
-  padding: 14px 16px;
-  font-weight: bold;
-  /*color: #1a6143;*/
-}
-
-/*nav {
-  
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #dd9933;
-}
-
-nav ul li {
-  float: left;
-  margin: auto;
-}
-
-nav ul li a {
-  display: block;
-  color: #1a6143;
-  text-align: center;
-  padding: 14px 16px;
+  padding: 10px;
   text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.primary nav a:hover {
+  color: orange;
+}
+
+nav.primary {
+  background-color: #4a6015;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
   font-weight: bold;
-}*/
-/*----------Navigation Menu Style End----------*/
-/*----------All Pages Style End----------*/
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.primary .action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+/*--------------- Home Page Grid Style Layout---------------*/
+
+header.primary {
+  /*background: rgba(7, 95, 99, 0.4);*/
+  grid-column: 1 / 11;
+  grid-row: 1 / 2;
+  padding: 0;
+  margin: 0;
+}
+
+.primary h1 {
+  font-family: "Rouge Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5em;
+  text-align: center;
+  align-content: center;
+  font-style: italic;
+  color: #fff;
+}
+
+header.primary h2 {
+  text-align: center;
+  color: #fff;
+}
+
+header.primary h1 a {
+  text-decoration: none;
+  color: orange;
+}
+
+#content {
+  grid-column: 2 / 10;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  backdrop-filter: blur(15px);
+  background-color: rgba(74, 96, 21, 0.2);
+  padding: 20px;
+  color: #fff;
+}
+
+footer.primary {
+  /*background: rgba(7, 95, 99, 0.4);*/
+  grid-column: 1 / 11;
+  grid-row: 3 / 4;
+  text-align: center;
+  background-color: #4a6015;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+footer.primary a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#blog {
+  /*background: rgba(26, 97, 67, 0.6);*/
+  grid-column: 1 / 7;
+  border-right: solid orange 1px;
+  padding-right: 20px;
+}
+
+#blog p {
+  text-indent: 20px;
+}
+
+#blog h2 {
+  color: orange;
+  padding: 0;
+}
+
+aside {
+  /*background: rgba(221, 153, 51, 0.2);*/
+  grid-column: 7 / 10;
+}
+
+aside h4 {
+  color: orange;
+}
+
+.widget {
+  margin: 20px;
+  border-bottom: dashed orange 1px;
+}
+.widget img {
+  align-items: center;
+}
+
+.widget figcaption {
+  font-size: small;
+  font-style: italic;
+}
+
+.widget p {
+  font-size: small;
+  text-indent: 20px;
+}
+
+.widget footer {
+  font-size: x-small;
+  margin-bottom: 10px;
+}
+
+.widget a {
+  color: #fff;
+}
+
+.widget a:hover {
+  color: orange;
+}
+/*----------ABOUT PAGE STYLE END----------*/
+
+/*----------CAMPING PAGE STYLING----------*/
+#contentCamping {
+  grid-column: 2 / 10;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+
+  backdrop-filter: blur(15px);
+  background-color: rgba(74, 96, 21, 0.2);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  align-content: center;
+}
+
+#contentCamping h2,
+h3 {
+  color: orange;
+  text-align: center;
+}
+
+#blogCamping {
+  /*background: rgba(26, 97, 67, 0.6);*/
+  grid-column: 1 / 10;
+  padding-top: 0;
+}
+
+#blogCamping a {
+  color: #fff;
+}
+
+#blogCamping a:hover {
+  color: orange;
+}
+
+#blogCamping figure {
+  align-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+table.camping {
+  text-align: center;
+  width: 100%;
+  border-collapse: separate;
+  text-wrap: wrap;
+}
+
+table.camping tr,
+td {
+  background-color: #4a6015;
+  border-spacing: 5px;
+}
+
+table.camping tr {
+  height: 100px;
+  width: 100px;
+}
+
+table.camping td {
+  font-weight: bold;
+}
+
+/* ---------------CAMPING PAGE STYLE END---------------*/
+
+/*Other styling*/
