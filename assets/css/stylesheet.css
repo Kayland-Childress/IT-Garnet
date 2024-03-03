@@ -12,6 +12,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
 body * {
   margin: 0;
   padding: 0;
@@ -169,4 +170,9 @@ menuitem > menu > menuitem:hover > menu > menuitem,
 menuitem > menu > menuitem.hover > menu > menuitem {
   transform: translateX(0) translateY(0%);
   opacity: 1;
+}
+
+img {
+  width: 75px;
+  height: 100px;
 }
