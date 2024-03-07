@@ -287,6 +287,10 @@ table.camping td {
   font-weight: bold;
 }
 
+#blogCamping figure {
+  text-align: center;
+}
+
 /* ---------------CAMPING PAGE STYLE END---------------*/
 
 /* ---------------FAQ PAGE STYLE---------------*/
@@ -340,8 +344,7 @@ table.camping td {
   transition: max-height 0.2s ease-out;
 }*/
 
-
-.accordion {  
+.accordion {
   color: #fff;
   cursor: pointer;
   padding: 18px;
@@ -353,27 +356,26 @@ table.camping td {
 }
 
 .accordion h3 {
-	padding: 7px 15px;
-	margin: 0;
-	cursor: pointer;
+  padding: 7px 15px;
+  margin: 0;
+  cursor: pointer;
   color: #fff;
   background-color: rgb(74, 96, 21);
   text-align: left;
 }
 
 .accordion h3:hover {
-	background-color: orange;
+  background-color: orange;
 }
 
 .accordion h3.active {
-	background-position: right 5px;
+  background-position: right 5px;
 }
 
 .accordion p {
-	background-color: rgba(255, 165, 0, 0.2);
+  background-color: rgba(255, 165, 0, 0.2);
   display: none;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s ease-out;
 }
-

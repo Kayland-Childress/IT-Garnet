@@ -21,7 +21,7 @@ function calculate() {
     if (document.getElementById("fromKilometers").checked) {
       fromUnit = document.getElementById("fromKilometers").value;
     }
-    if (document.getElementById("frominches").checked) {
+    if (document.getElementById("fromInches").checked) {
       fromUnit = document.getElementById("frominches").value;
     }
     if (document.getElementById("fromFeet").checked) {
@@ -58,19 +58,26 @@ function calculate() {
       toUnit = document.getElementById("toMiles").value;
     }
 
-    CalculateResult(fromValue, fromUnit, toUnit)
+    CalculateResult(fromValue, fromUnit, toUnit);
   }
 }
 
-async function CalculateResult(fromValue, fromUnit, toUnit){
+async function CalculateResult(fromValue, fromUnit, toUnit) {
   "use strict";
 
-  myURL = myURL + "&FromValue=" + encodeURIComponent(fromValue) + "&FromUnit=" + encodeURIComponent(fromUnit) + "&ToUnit=" + encodeURIComponent(toUnit);
+  var myURL =
+    "https://brucebauer.info/assets/ITEC3650/unitsconversion.php" +
+    "?FromValue=" +
+    encodeURIComponent(fromValue) +
+    "&FromUnit=" +
+    encodeURIComponent(fromUnit) +
+    "&ToUnit=" +
+    encodeURIComponent(toUnit);
 
   let myCalcObject = await fetch(myURL);
   let myResult = await myCalcObject.text();
 
-  document.getElementById("result").innerHTML = myResult;
+  document.getElementById("Result").innerHTML = myResult;
 }
 
 function clearform() {
@@ -94,7 +101,7 @@ function clearform() {
   document.getElementById("toYards").checked = false;
   document.getElementById("toMiles").checked = false;
   document.getElementById("ToUnitError").innerHTML = "";
-  
+
   document.getElementById("Result").innerHTML = "";
 }
 
