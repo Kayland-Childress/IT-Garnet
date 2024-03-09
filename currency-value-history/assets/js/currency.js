@@ -87,7 +87,7 @@ function ClearForm() {
   document.getElementById("baseCurrencyError").innerHTML = "";
   document.getElementById("toCurrencyError").innerHTML = "";
   document.getElementById("fromDateError").innerHTML = "";
-  document.getElementById("toDateCurrencyError").innerHTML = "";
+  document.getElementById("toDateError").innerHTML = "";
 }
 
 // Validate form using jQuery Validation Plugin
