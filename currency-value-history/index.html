@@ -28,7 +28,7 @@
         <option value="BRL">Brazilian Real</option>
         <option value="TRY">Turkish Lira</option>
       </select>
-      <label class="error" id="error" for="baseCurrency"></label>
+      <label class="error" id="baseCurrencyError" for="baseCurrency"></label>
       <br />
 
       <label for="toCurrency" class="formlabel">Convert to Currency: </label>
@@ -45,7 +45,7 @@
         <option value="BRL">Brazilian Real</option>
         <option value="TRY">Turkish Lira</option>
       </select>
-      <label class="error" id="error" for="toCurrency"></label>
+      <label class="error" id="toCurrencyError" for="toCurrency"></label>
       <br />
 
       <label for="fromDate" class="formlabel">From Date: </label>
@@ -59,7 +59,7 @@
         data-rule-date="true"
         data-msg-date="Date must be mm/dd/yyyy format"
       />
-      <label class="error" id="error" for="fromDate"></label>
+      <label class="error" id="fromDateError" for="fromDate"></label>
       <br />
 
       <label for="toDate" class="formlabel">To Date: </label>
@@ -73,7 +73,7 @@
         data-rule-date="true"
         data-msg-date="Date must be mm/dd/yyyy format"
       />
-      <label class="error" id="error" for="toDate"></label>
+      <label class="error" id="toDateError" for="toDate"></label>
       <br /><br />
 
       <input
@@ -95,7 +95,7 @@
       <br />
 
       <hr />
-      
+
       <div class="clearfix">
         <div class="img-container">
           <canvas id="chartjs" width="400" height="400"></canvas>

@@ -83,7 +83,11 @@ function ClearForm() {
   document.getElementById("toCurrency").value = "";
   document.getElementById("fromDate").value = "";
   document.getElementById("toDate").value = "";
-  document.getElementsByClassName("error").innerHTML = "";
+  
+  document.getElementById("baseCurrencyError").innerHTML = "";
+  document.getElementById("toCurrencyError").innerHTML = "";
+  document.getElementById("fromDateError").innerHTML = "";
+  document.getElementById("toDateCurrencyError").innerHTML = "";
 }
 
 // Validate form using jQuery Validation Plugin
