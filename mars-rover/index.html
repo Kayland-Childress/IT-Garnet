@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Polygon - Currency Exchange History" />
+    <meta name="keywords" content="HTML, CSS,JavaScript, AJAX, jQuery" />
+    <meta name="author" content="Kayland Childress" />
+    <title>Currency Exchange History | Kayland Childress</title>
+    <link href="assets/css/currency.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h1>Mars Rover Photo Explorer</h1>
+    <table>
+      <th>Rover</th>
+      <th>Mission Start</th>
+      <th>Mission End</th>
+
+      <tr>
+        Curiosity
+      </tr>
+      <tr>
+        Opportunity
+      </tr>
+      <tr>
+        Spirit
+      </tr>
+    </table>
+    <br />
+
+    <form id="myform">
+      <h2>Select a rover and a picture date:</h2>
+      <label for="rover" class="formlabel">Rover: </label>
+      <input
+        type="radio"
+        class="radioSelect"
+        id="rover"
+        name="rover"
+        data-rule-required="true"
+        data-msg-required="A Rover is Required"
+      />
+      <label class="error" id="roverError" for="rover"></label>
+      <br />
+
+      <label for="date" class="formlabel">Picture Date: </label>
+      <input
+        type="date"
+        id="date"
+        name="date"
+        value="mm/dd/yyyy"
+        data-rule-required="true"
+        data-msg-required="Date is Required"
+        data-rule-date="true"
+        data-msg-date="Date must be mm/dd/yyyy format"
+      />
+      <label class="error" id="dateError" for="date"></label>
+      <br />
+
+      <input
+        type="button"
+        value="Search"
+        id="Search"
+        name="Search"
+        onclick="getResults();"
+      />
+
+      <input
+        type="button"
+        value="Clear"
+        id="Clear"
+        name="Clear"
+        onclick="ClearForm();"
+      />
+
+      <br />
+
+      <hr />
+    </form>
+  </body>
+</html>
